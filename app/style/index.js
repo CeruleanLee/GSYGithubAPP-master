@@ -14,6 +14,7 @@ export const shadowRadius = (Platform.OS === 'android') ? 5 : 2;
 export const elevation = (Platform.OS === 'android') ? 2 : 1;
 
 const styles = StyleSheet.create({
+    //适用于所有场景的Style（可选）
     routerStyle: {
         //设置router的样式
         flex: 1,
@@ -59,6 +60,20 @@ const styles = StyleSheet.create({
         flexDirection: "column",
     },
     justifyCenter: {
+        //弹性盒子元素在主轴（横轴）的对齐方式
+        //取值：
+        //
+        // justify-content: flex-start | flex-end | center | space-between | space-around;
+        // 1
+        // flex-start: 弹性盒子元素将向行起始位置对齐。第一个元素与左起始边界对齐，后面的元素接着第一个元素进行排列。
+        //
+        // flex-end: 弹性盒子元素将向行结束位置对齐。整体靠着行结束的位置排列。
+        //
+        // center：整体居中显示。
+        //
+        // space-between: 弹性盒子元素均匀分布。第一个元素的边界与行的主起始位置的边界对齐，同时最后一个元素的边界与行的主结束位置的边距对齐，而剩余的伸缩盒项目则平均分布，并确保两两之间的空白空间相等。
+        //
+        // space-around: 弹性盒子元素均匀分布。两端保留子元素与子元素之间间距大小的一半。
         justifyContent: "center"
     },
     centered: {

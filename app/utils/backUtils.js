@@ -8,7 +8,7 @@ import Toast from '../components/common/ToastProxy'
 import SplashScreen from '../components/widget/native/SplashNative'
 
 import {Router, Actions, Scene} from 'react-native-router-flux';
-
+//退出
 export default function BackUtils() {
     let hasTip = false;
     let ts;

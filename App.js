@@ -48,6 +48,7 @@ export default class App extends Component<{}> {
             return <View/>
         }
         return (
+            //Provider的原理：使用用了react中的context属性：
             <Provider store={this.state.store}>
                 {getRouter()}
             </Provider>

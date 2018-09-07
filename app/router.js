@@ -43,18 +43,21 @@ import {CommonMoreRightBtnPress, RepositoryDetailRightBtnPress} from './utils/ac
 
 import WelcomePage from "./components/WelcomePage"
 import {screenWidth, drawerWidth} from "./style/index";
-
+//Lightbox用于将组件渲染在当前组件上Scene的组件 。与Modal不同，它将允许调整大小和背景的透明度
 /**
  * 全局路由
  */
 const getRouter = () => {
     return (
         <Router
+            //适用于所有场景的Style（可选）
             getSceneStyle={() => {
                 return styles.routerStyle
             }}
+            //允许在Android中自定义控制返回按钮
             backAndroidHandler={
                 BackUtils()}>
+
             <Lightbox>
                 <Scene key="main">
                     <Scene key="WelcomePage" component={WelcomePage} hideNavBar hideTabBar hide/>

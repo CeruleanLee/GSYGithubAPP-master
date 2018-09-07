@@ -50,7 +50,7 @@ class LoginPage extends Component {
         this.state = {
             saveUserName: '',
             savePassword: '',
-            secureTextEntry: true,
+            secureTextEntry: true,//密码不可见
             secureIcon: "eye-with-line",
             opacity: new Animated.Value(0),
             progress: new Animated.Value(0),
@@ -187,6 +187,7 @@ class LoginPage extends Component {
                     </View>
                 </View>
                 <View
+                    //登陆弹窗
                     style={[{backgroundColor: Constant.miWhite}, {
                         height: 360,
                         width: screenWidth - 80,
@@ -245,8 +246,10 @@ class LoginPage extends Component {
                             </TouchableOpacity>
                         </View>
                     </View>
+
                     <View>
                     </View>
+
                     <TouchableOpacity style={[styles.centered, {marginTop: Constant.normalMarginEdge}]}
                                       onPress={() => {
                                           this.toLogin();
